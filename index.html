@@ -3,9 +3,17 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <style>
+
+p{color:white;}
+
+body{
+	background-color:black;
+    
+}
+
 canvas {
     border:1px solid #d3d3d3;
-    background-image: url("https://www.selectsumter.com/fileadmin/_processed_/3/4/csm_TLC_4_9a153823f7.jpg");
+    background-image: url("https://cdn.mos.cms.futurecdn.net/AFjcCbUUeYSLjF6pQ7pQXn.jpg");
     
   	background-size: 100% 100%;
     background-color: rgb(100,100,100,1);
@@ -19,15 +27,15 @@ canvas {
 var myGamePiece;
 
 function startGame() {
-    myGamePiece = new component(50, 50, "https://media.glassdoor.com/people/sqll/345811/thomas-l-cardella-and-associates-tom-cardella.png", 10, 120, "image");
+    myGamePiece = new component(80, 80, "https://media.glassdoor.com/people/sqll/345811/thomas-l-cardella-and-associates-tom-cardella.png", 10, 120, "image");
     myGameArea.start();
 }
 
 var myGameArea = {
     canvas : document.createElement("canvas"),
     start : function() {
-        this.canvas.width = 780;
-        this.canvas.height = 470;
+        this.canvas.width = 980;
+        this.canvas.height = 550;
         this.context = this.canvas.getContext("2d");
         document.body.insertBefore(this.canvas, document.body.childNodes[0]);
         this.frameNo = 0;
